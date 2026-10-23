@@ -4,7 +4,7 @@
 <h2>Purpose and scope</h2>
 <p>This policy describes the personal desktop utility Gmail Bill Archive. The utility archives credit-card statement PDF attachments from a Gmail account explicitly authorized by its owner.</p>
 <h2>Google data accessed</h2>
-<p>The utility requests the Gmail read-only OAuth scope (`<a href="https://www.googleapis.com/auth/gmail.readonly`).">https://www.googleapis.com/auth/gmail.readonly`).</a> This permission allows reading Gmail messages and attachments. The utility uses sender addresses, subject lines, message identifiers, MIME metadata, and attachment data to identify and download statement PDFs. Email content returned with a matching message can be processed temporarily in memory; entire email messages are not saved as archive files.</p>
+<p>The utility requests the Gmail read-only OAuth scope (<code>https://www.googleapis.com/auth/gmail.readonly</code>). This permission allows reading Gmail messages and attachments. The utility uses sender addresses, subject lines, message identifiers, MIME metadata, and attachment data to identify and download statement PDFs. Email content returned with a matching message can be processed temporarily in memory; entire email messages are not saved as archive files.</p>
 <h2>Data stored and use</h2>
 <p>Original statement PDFs are saved in the destination folder chosen by the owner. The utility does not decrypt or edit them. A local record stores message and attachment identifiers, the bank and statement month, file paths, file hashes, and download outcomes to prevent duplicates and support retries. Local result logs may include bank names, statement months, and attachment filenames.</p>
 <p>Google OAuth client configuration and authorization tokens are stored separately in a private local tool directory, outside the statement destination. Tokens are used to maintain the owner&#x27;s authorized read-only connection to Gmail. The utility does not request or store bank website passwords or PDF passwords.</p>
@@ -14,7 +14,7 @@
 <h2>Retention and deletion</h2>
 <p>Statement PDFs and local records remain on the owner&#x27;s devices until the owner deletes them. The utility does not automatically delete archived PDFs. The owner can delete downloaded PDFs, local records, and stored OAuth tokens, and should separately handle any copies retained by the owner&#x27;s backup or synchronization services.</p>
 <h2>Control and revocation</h2>
-<p>The owner can stop the local schedule and revoke the utility&#x27;s access through Google Account third-party connections at <a href="https://myaccount.google.com/connections.">https://myaccount.google.com/connections.</a> Revoking access prevents future Gmail downloads once the authorization is no longer valid; it does not delete previously downloaded files.</p>
+<p>The owner can stop the local schedule and revoke the utility&#x27;s access through Google Account third-party connections at <a href="https://myaccount.google.com/connections">https://myaccount.google.com/connections</a>. Revoking access prevents future Gmail downloads once the authorization is no longer valid; it does not delete previously downloaded files.</p>
 <h2>Personal-use administration</h2>
 <p>This is a personal-use utility administered by the account owner. The support email shown on its Google OAuth consent screen is the point of contact for questions about this installation. This public information site contains no mailbox login, file-upload form, or statement-viewing function.</p>
 <h2>Public information site</h2>
